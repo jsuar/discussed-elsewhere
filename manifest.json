@@ -2,7 +2,7 @@
   "name": "Discussed Elsewhere",
   "version": "1.0",
   "manifest_version": 3,
-  "description": "This Chrome extension checks if the current URL is referenced in Reddit or Hacker News.",
+  "description": "This Chrome extension checks if the current tab URL is referenced in Reddit or Hacker News.",
   "browser_action": {
     "default_icon": {
             "19": "img/icon-19.png",
