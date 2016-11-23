@@ -1,0 +1,20 @@
+{
+  "name": "Discussed Elsewhere",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "This Chrome extension checks if the current URL is referenced in Reddit or Hacker News.",
+  "browser_action": {
+    "default_icon": {
+            "19": "img/icon-19.png",
+            "38": "img/icon-38.png"
+        },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+      "16": "img/icon-16.png",
+      "128": "img/icon-128.png"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
