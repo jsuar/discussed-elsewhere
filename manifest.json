@@ -1,18 +1,18 @@
 {
-  "name": "Discussed Elsewhere",
+  "name": "Discussed Elsewhere: Reddit, Hacker News, etc",
+  "short_name": "Discussed Elsewhere",
   "version": "1.0",
-  "manifest_version": 3,
-  "description": "This Chrome extension checks if the current tab URL is referenced in Reddit or Hacker News.",
+  "manifest_version": 2,
   "browser_action": {
-    "default_icon": {
-            "19": "img/icon-19.png",
-            "38": "img/icon-38.png"
-        },
+    "default_icon": "img/icon-128.png",
     "default_popup": "popup.html"
   },
+  "author": "John Suarez",
+  "description": "This Chrome extension checks if the current tab URL is referenced in Reddit or Hacker News.",
   "icons": {
-      "16": "img/icon-16.png",
-      "128": "img/icon-128.png"
+    "16": "img/icon-128.png",
+    "48": "img/icon-128.png",
+    "128": "img/icon-128.png"
   },
   "permissions": [
     "activeTab"
