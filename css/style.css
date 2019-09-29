@@ -1,0 +1,14 @@
+body {
+    padding: 20px;
+    width: 275px;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+td, th {
+    white-space: nowrap;
+    vertical-align: top;
+}
+
