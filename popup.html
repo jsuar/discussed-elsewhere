@@ -6,27 +6,72 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Discussed Elsewhere</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <style type="text/css">
-    body {
-      width: 175px;
-      padding: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body id="popup">
-  <div class='container'>
-    <table>
+<body>
+  <h6>Discussed Elsewhere</h6>
+  <div>
+    <table class="table table-sm table-striped">
       <tr>
         <td>
-          <a id="rLink" target="_blank">Reddit</a>: <span id="rCount"></span>
+          <a id="redditLink" target="_blank">
+            <button type="button" class="btn btn-light">
+              <img height="16" width="16" src="img/reddit.svg" />
+              <span id="redditCount" class="badge badge-light"></span>
+              <span class="sr-only">Reddit search count</span>
+            </button>
+          </a>
+        </td>
+        <td>
+          <a id="googleRedditLink" target="_blank">
+            <button type="button" class="btn btn-light">
+              <img height="16" width="16" src="img/google.svg" />
+              <span id="googleRedditCount" class="badge badge-light"></span>
+              <span class="sr-only">Reddit search via Google</span>
+            </button>
+          </a>
+        </td>
+        <td>
+          <a id="bingRedditLink" target="_blank">
+            <button type="button" class="btn btn-light">
+              <img height="16" width="16" src="img/bing.svg" />
+              <span id="bingRedditCount" class="badge badge-light"></span>
+              <span class="sr-only">Reddit search via Bing</span>
+            </button>
+          </a>
         </td>
       </tr>
   </div>
   <tr>
     <td>
-      <a id="hnLink" target="_blank">Hacker News</a>: <span id="hnCount"></span>
+      <a id="hackerNewsLink" target="_blank">
+        <button type="button" class="btn btn-light">
+          <img height="16" width="16" src="img/ycombinator.svg" />
+          <span id="hackerNewsCount" class="badge badge-light"></span>
+          <span class="sr-only">Hacker News search count</span>
+        </button>
+      </a>
+    </td>
+    <td>
+      <a id="googleHackerNewsLink" target="_blank">
+        <button type="button" class="btn btn-light">
+          <img height="16" width="16" src="img/google.svg" />
+          <span id="googleHackerNewsCount" class="badge badge-light"></span>
+          <span class="sr-only">Hacker News search via Google</span>
+        </button>
+      </a>
+    </td>
+    <td>
+      <a id="bingHackerNewsLink" target="_blank">
+        <button type="button" class="btn btn-light">
+          <img height="16" width="16" src="img/bing.svg" />
+          <span id="bingHackerNewsCount" class="badge badge-light"></span>
+          <span class="sr-only">Hacker News search via Bing</span>
+        </button>
+      </a>
     </td>
   </tr>
   </table>
