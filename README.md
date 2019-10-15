@@ -8,6 +8,7 @@ Often I find that I am checking if a news, wikipedia, etc. article has been dicu
 
 ## To do
  * [ ] Add other sites of interest (recommendations welcomed)
+ * [ ] Identify keywords / concepts on the site and link to Wikipedia
  
 ## Completed
  * [x] Checks Hacker News and Reddit for current tab URL
