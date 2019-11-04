@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		var currentUrl = tabs[0].url
 		// Remove https:// or http://
 		currentUrl = currentUrl.replace(/^(https?:|)\/\//, '')
-		var redditCount = 0, hackerNewsCount = 0;
+		var redditCount = 0, hackerNewsCount = 0, googleCount = 0;
 
 		aClient = new HttpClient();
+
 		var url = 'https://www.reddit.com/submit.json?url=' + encodeURIComponent(currentUrl)
 		aClient.get(url, function (response) {
 			try {
@@ -43,8 +44,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			document.getElementById("redditCount").innerHTML = redditCount;
 			document.getElementById("redditLink").href = "https://www.reddit.com/search?q=" + encodeURIComponent(currentUrl);
-			document.getElementById("googleRedditLink").href = "https://www.google.com/search?q=\"" + encodeURIComponent(currentUrl) + "\"+site%3Areddit.com";
 			document.getElementById("bingRedditLink").href = "https://www.bing.com/search?q=\"" + encodeURIComponent(currentUrl) + "\"+site%3Areddit.com";
+		});
+
+		// Custom Google search for Reddit
+		// Surround with quotes
+		var encodedUrl = '%22' + encodeURIComponent(currentUrl) + '%22'
+		var url = 'https://www.googleapis.com/customsearch/v1?q=' + encodedUrl + '%20site:reddit.com&cx=011989466420602001809:1srqdechne1&key=AIzaSyCymuLy9nS3LgW426hJ3wQSKdHptQeXfQE'
+		aClient.get(url, function (response) {
+			try {
+				console.log(response)
+				googleCount = response.searchInformation.totalResults;
+			} catch (e) {
+				/* No matches (most likely)*/
+				console.log("Failed to results from Reddit: ", e)
+			}
+
+			if (isBlank(googleCount)) {
+				googleCount = 0;
+			}
+
+			document.getElementById("googleRedditLink").href = "https://cse.google.com/cse?cx=011989466420602001809:1srqdechne1&q=" + encodedUrl + "+site%3Areddit.com";
+			document.getElementById("googleRedditCount").innerHTML = googleCount
 		});
 
 		url = "https://hn.algolia.com/api/v1/search?query=" + encodeURIComponent(currentUrl) + "&restrictSearchableAttributes=url";
@@ -59,5 +80,26 @@ document.addEventListener('DOMContentLoaded', function () {
 			document.getElementById("googleHackerNewsLink").href = "https://www.google.com/search?q=\"" + encodeURIComponent(currentUrl) + "\"+site%3Anews.ycombinator.com";
 			document.getElementById("bingHackerNewsLink").href = "https://www.bing.com/search?q=\"" + encodeURIComponent(currentUrl) + "\"+site%3Anews.ycombinator.com";
 		});
+
+		// Custom Google search for Hacker News
+		var encodedUrl = '%22' + encodeURIComponent(currentUrl) + '%22'
+		var url = 'https://www.googleapis.com/customsearch/v1?q=' + encodedUrl + '%20site:news.ycombinator.com&cx=011989466420602001809:1srqdechne1&key=AIzaSyCymuLy9nS3LgW426hJ3wQSKdHptQeXfQE'
+		aClient.get(url, function (response) {
+			try {
+				console.log(response)
+				googleCount = response.searchInformation.totalResults;
+			} catch (e) {
+				/* No matches (most likely)*/
+				console.log("Failed to results from Reddit: ", e)
+			}
+
+			if (isBlank(redditCount)) {
+				googleCount = 0;
+			}
+
+			document.getElementById("googleHackerNewsLink").href = "https://cse.google.com/cse?cx=011989466420602001809:1srqdechne1&q=" + encodedUrl + "+site%3Anews.ycombinator.com";
+			document.getElementById("googleHackerNewsCount").innerHTML = googleCount
+		});
+
 	});
 }, false);
