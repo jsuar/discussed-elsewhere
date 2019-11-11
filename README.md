@@ -7,10 +7,12 @@ Available in the Chrome web store: https://chrome.google.com/webstore/detail/dis
 Often I find that I am checking if a news, wikipedia, etc. article has been dicussed on Reddit or Hacker News. Discussions on those website provide a lot of insight and feedback so I wanted to make the checking process a little easier. Now with a simple click I can determine whether or not the current URL has been discussed on Reddit or Hacker News.
 
 ## To do
+ * [ ] Get Bing search count [via API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/)
  * [ ] Add other sites of interest (recommendations welcomed)
  * [ ] Identify keywords / concepts on the site and link to Wikipedia
  
 ## Completed
+ * [x] Integrate Google search count
  * [x] Checks Hacker News and Reddit for current tab URL
  * [x] Display search count find and hyperlink to search
 
@@ -18,3 +20,4 @@ Often I find that I am checking if a news, wikipedia, etc. article has been dicu
  * https://hn.algolia.com/api
  * https://www.reddit.com/dev/api/
  * https://simpleicons.org/
+ * https://developers.google.com/custom-search/docs/overview

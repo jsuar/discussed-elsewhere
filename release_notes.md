@@ -1,5 +1,10 @@
 # Release Notes
 
+## 1.2.0
+* Uses Google Custom search to obtain Google search result count
+* Badge updated with Reddit and Hacker News counts using a background script
+* [Google CSE JSON is limited to 10,000 queries per day](https://developers.google.com/custom-search/docs/overview#summary_of_custom_search_offerings)
+
 ## 1.1.0
 * Added Google and Bing search link since Reddit search alone seems limited.
 * Strips `https:\\` or `http:\\` from the tab URL for better results.
