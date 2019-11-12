@@ -1,5 +1,8 @@
 # Release Notes
 
+## 1.3.0
+* Badge now updates on page reloads
+
 ## 1.2.0
 * Uses Google Custom search to obtain Google search result count
 * Badge updated with Reddit and Hacker News counts using a background script
