@@ -97,6 +97,12 @@ chrome.tabs.onActivated.addListener(function (activeInfo) {
     getActiveTab(callback);
 });
 
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+    if (changeInfo.status == 'complete' && tab.status == 'complete' && tab.url != undefined) {
+        getActiveTab(callback);
+    }
+});
+
 function getActiveTab(callback) {
     chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
         var tab = tabs[0];
