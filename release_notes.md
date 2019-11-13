@@ -1,5 +1,8 @@
 # Release Notes
 
+## 1.4.0
+* New icon and screenshots
+
 ## 1.3.0
 * Badge now updates on page reloads
 
