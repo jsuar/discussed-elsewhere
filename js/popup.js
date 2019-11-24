@@ -91,6 +91,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		var currentUrl = tabs[0].url
 		// Remove https:// or http://
 		currentUrl = currentUrl.replace(/^(https?:|)\/\//, '')
+		// Remove everything after a ?
+		splitCurrentUrl = currentUrl.split('?')
+		currentUrl = splitCurrentUrl[0]
 
 		// Reddit search
 		var url = 'https://www.reddit.com/search.json?q=' + encodeURIComponent(currentUrl);
@@ -100,7 +103,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		// Custom Google search for Reddit
 		// Surround with quotes
-		var encodedUrl = '%22' + encodeURIComponent(currentUrl) + '%22';
+		// var encodedUrl = '%22' + encodeURIComponent(currentUrl) + '%22';
+		// No quotes
+		var encodedUrl = encodeURIComponent(currentUrl);
 		url = 'https://www.googleapis.com/customsearch/v1?q=' + encodedUrl + '%20site:reddit.com&cx=011989466420602001809:1srqdechne1&key=GOOGLE_CSE_API';
 		document.getElementById("googleRedditLink").href = "https://cse.google.com/cse?cx=011989466420602001809:1srqdechne1&q=" + encodedUrl + "+site%3Areddit.com";
 		setPopupElementsWithSearchCounts(url, sourceTypes.CSE_REDDIT);
@@ -113,7 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		setPopupElementsWithSearchCounts(url, sourceTypes.HACKERNEWS);
 
 		// Custom Google search for Hacker News
+		// Surround with quotes
 		encodedUrl = '%22' + encodeURIComponent(currentUrl) + '%22';
+		// No quotes
+		// encodedUrl = encodeURIComponent(currentUrl);
 		url = 'https://www.googleapis.com/customsearch/v1?q=' + encodedUrl + '%20site:news.ycombinator.com&cx=011989466420602001809:1srqdechne1&key=GOOGLE_CSE_API';
 		document.getElementById("googleHackerNewsLink").href = "https://cse.google.com/cse?cx=011989466420602001809:1srqdechne1&q=" + encodedUrl + "+site%3Anews.ycombinator.com";
 		setPopupElementsWithSearchCounts(url, sourceTypes.CSE_HACKERNEWS);

@@ -1,5 +1,9 @@
 # Release Notes
 
+## 1.4.1
+* Search without quotes for better Reddit results
+* Remove everything after a `?` in the URL
+
 ## 1.4.0
 * New icon and screenshots
 

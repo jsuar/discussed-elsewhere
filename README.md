@@ -18,6 +18,7 @@ Note: There are some significant inconsistencies with the Reddit search results.
  * [ ] Identify keywords / concepts on the site and link to Wikipedia
  
 ## Completed
+ * [x] Remove everything after the `?` in a URL for a larger result set
  * [x] Integrate Google search count
  * [x] Checks Hacker News and Reddit for current tab URL
  * [x] Display search count find and hyperlink to search
