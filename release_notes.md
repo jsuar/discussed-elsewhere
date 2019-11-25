@@ -1,5 +1,8 @@
 # Release Notes
 
+## 1.4.2
+* Rotated Google JSON API key
+
 ## 1.4.1
 * Search without quotes for better Reddit results
 * Remove everything after a `?` in the URL
