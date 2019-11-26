@@ -1,5 +1,8 @@
 # Release Notes
 
+## 1.4.3
+* Do not remove everything after a `?` in the URL. Will make it optional in future release.
+
 ## 1.4.2
 * Rotated Google JSON API key
 

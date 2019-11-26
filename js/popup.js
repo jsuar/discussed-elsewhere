@@ -92,8 +92,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		// Remove https:// or http://
 		currentUrl = currentUrl.replace(/^(https?:|)\/\//, '')
 		// Remove everything after a ?
-		splitCurrentUrl = currentUrl.split('?')
-		currentUrl = splitCurrentUrl[0]
+		// splitCurrentUrl = currentUrl.split('?')
+		// currentUrl = splitCurrentUrl[0]
 
 		// Reddit search
 		var url = 'https://www.reddit.com/search.json?q=' + encodeURIComponent(currentUrl);
