@@ -13,12 +13,12 @@ Note: There are some significant inconsistencies with the Reddit search results.
 * https://www.reddit.com/search.json?q=philosophy
 
 ## To do
+ * [ ] Add toggle to ignore everything after a `?` in the URL for larger result sets
  * [ ] Get Bing search count [via API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/)
  * [ ] Add other sites of interest (recommendations welcomed)
  * [ ] Identify keywords / concepts on the site and link to Wikipedia
  
 ## Completed
- * [x] Remove everything after the `?` in a URL for a larger result set
  * [x] Integrate Google search count
  * [x] Checks Hacker News and Reddit for current tab URL
  * [x] Display search count find and hyperlink to search

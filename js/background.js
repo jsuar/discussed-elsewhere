@@ -77,8 +77,8 @@ function callback(tab) {
         console.log(window.location.toString())
         currentUrl = currentUrl.replace(/^(https?:|)\/\//, '')
         // Remove everything after a ?
-		splitCurrentUrl = currentUrl.split('?')
-		currentUrl = splitCurrentUrl[0]
+		// splitCurrentUrl = currentUrl.split('?')
+		// currentUrl = splitCurrentUrl[0]
     }
     catch (error) {
         console.log(error);
